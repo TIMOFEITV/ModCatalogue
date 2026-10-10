@@ -39,8 +39,34 @@ One JSON object with a schema version and an array of mods:
 | `files[].fileName` | yes | A bare `.dll` name: no folders, no `..`, nothing but the file. It becomes a file under the game folder, so this is enforced, not advised |
 | `files[].folder` | yes | `plugins` for a mod, `core` for the shared library. Nothing else is accepted |
 | `files[].expectsPluginAttribute` | yes | `true` for a mod (BepInEx will not load it without `[BepInPlugin]`), `false` for the shared library, which deliberately has none |
+| `postInstall` | no | Up to four optional setup steps, offered one by one after installing — see below. Absent means none |
 
 Keep entries alphabetical by repository name. At most 64 mods and 16 files per mod — caps, not targets.
+
+### Optional setup steps
+
+For what the download cannot do by itself: a stream mod's ChatBridge, which talks to Twitch and is
+configured per machine, is the case this exists for. Each step names a script shipped **inside the
+release zip** and a description shown in the prompt:
+
+```json
+"postInstall": [
+  {
+    "script": "setup-chatbridge.ps1",
+    "description": "Installs and configures ChatBridge so the stream mod can read chat. Skipping leaves the mod installed but chat features off."
+  }
+]
+```
+
+| Field | Rules |
+|---|---|
+| `script` | A bare `.ps1` name — no folders, no `..` — resolved against the unpacked download. At most 64 KB, since the launcher shows it before asking |
+| `description` | Up to 280 characters. Say what it does and what skipping costs; it is shown verbatim |
+
+The launcher offers each step separately after the files are installed, shows the script, and defaults
+to skipping — denying everything leaves the install as it was. A declared script the release does not
+contain fails the install rather than being fetched from anywhere else. Scripts receive the game
+folder as `-GameDir` and run with the download as their working directory.
 
 ## Getting your mod listed
 
