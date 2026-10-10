@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "mods": [
+    {
+      "owner": "swyf-modding",
+      "repo": "AI-Backend",
+      "displayName": "AI Backend",
+      "summary": "Routes the game's AI calls to your own LLM - Ollama, LM Studio, llama.cpp, OpenAI, OpenRouter, vLLM, Groq - instead of the hosted backend.",
+      "files": [
+        { "fileName": "ScamWYF.AiBackend.dll", "folder": "plugins", "expectsPluginAttribute": true },
+        { "fileName": "ScamWYF.Modding.Core.dll", "folder": "core", "expectsPluginAttribute": false }
+      ]
+    },
+    {
+      "owner": "swyf-modding",
+      "repo": "Mod-Handler",
+      "displayName": "Mod Handler",
+      "summary": "Adds a Plugins tab to the in-game menu (F1), listing every installed plugin with a switch for each.",
+      "files": [
+        { "fileName": "ScamWYF.ModHandler.dll", "folder": "plugins", "expectsPluginAttribute": true },
+        { "fileName": "ScamWYF.Modding.Core.dll", "folder": "core", "expectsPluginAttribute": false }
+      ]
+    },
+    {
+      "owner": "swyf-modding",
+      "repo": "mod-lib",
+      "displayName": "Shared Library",
+      "summary": "The library the mods are built against. Installed on its own it does nothing; it is here so the first mod you install brings it with it.",
+      "files": [
+        { "fileName": "ScamWYF.Modding.Core.dll", "folder": "core", "expectsPluginAttribute": false }
+      ]
+    }
+  ]
+}
