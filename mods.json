@@ -12,6 +12,21 @@
       ]
     },
     {
+      "owner": "wcixv",
+      "repo": "chaos-mode",
+      "displayName": "Chaos Mode",
+      "summary": "Party mod that fires random chaos events during your shift, with an optional Creator Mode where chat votes on what happens next. Host-only; friends don't need the mod.",
+      "files": [
+        { "fileName": "ChaosMode.dll", "folder": "plugins", "expectsPluginAttribute": true }
+      ],
+      "postInstall": [
+        {
+          "script": "setup-chatbridge.ps1",
+          "description": "Downloads and installs ChatBridge so Creator Mode can read YouTube, TikTok and Kick chat and serve the OBS overlay. Skipping leaves the mod installed but Creator Mode locked."
+        }
+      ]
+    },
+    {
       "owner": "swyf-modding",
       "repo": "Mod-Handler",
       "displayName": "Mod Handler",
