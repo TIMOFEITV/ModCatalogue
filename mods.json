@@ -68,6 +68,15 @@
       ]
     },
     {
+      "owner": "xofa18",
+      "repo": "SWYF-ModManager",
+      "displayName": "Mod Manager",
+      "summary": "Adds a MODS button to the main menu with a list of your installed mods. Turn each one on or off (using the launcher's plugins_disabled folder) and edit its settings in game, then restart with one click. F8 opens the same window anywhere.",
+      "files": [
+        { "fileName": "SwyfModManager.dll", "folder": "plugins", "expectsPluginAttribute": true }
+      ]
+    },
+    {
       "owner": "richardvrabelx-oss",
       "repo": "SWYF-SWAT",
       "displayName": "SWAT Mod",
