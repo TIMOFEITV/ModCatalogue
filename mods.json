@@ -40,6 +40,15 @@
       ]
     },
     {
+      "owner": "ProProgramer123",
+      "repo": "HostBoss",
+      "displayName": "HostBoss",
+      "summary": "Lets the lobby host control the boss presentation, slides, quota, quotes and recordings. Use the BepInEx plugin release; remove legacy HostBoss disk patches before switching.",
+      "files": [
+        { "fileName": "ScamWYF.HostBoss.dll", "folder": "plugins", "expectsPluginAttribute": true }
+      ]
+    },
+    {
       "owner": "swyf-modding",
       "repo": "Mod-Handler",
       "displayName": "Mod Handler",
