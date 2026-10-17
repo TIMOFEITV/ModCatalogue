@@ -12,6 +12,19 @@
       ]
     },
     {
+      "owner": "TIMOFEITV",
+      "repo": "Caller-Portrait-Importer",
+      "displayName": "Caller Portrait Importer",
+      "summary": "Import custom PNG and JPEG portraits into Character Creator with an in-game file explorer.",
+      "files": [
+        {
+          "fileName": "CallerPortraitImporter.dll",
+          "folder": "plugins",
+          "expectsPluginAttribute": true
+        }
+      ]
+    },
+    {
       "owner": "wcixv",
       "repo": "chaos-mode",
       "displayName": "Chaos Mode",
