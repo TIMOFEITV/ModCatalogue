@@ -44,6 +44,15 @@
       "files": [
         { "fileName": "ScamWYF.Modding.Core.dll", "folder": "core", "expectsPluginAttribute": false }
       ]
+    },
+    {
+      "owner": "richardvrabelx-oss",
+      "repo": "SWYF-SWAT",
+      "displayName": "SWAT Mod",
+      "summary": "When you fail the quota, you get swatted by police officers, if they catch you, you get reset back to Day 1.",
+      "files": [
+        { "fileName": "ScamWYF.SwatOnQuotaFail.dll", "folder": "plugins", "expectsPluginAttribute": true }
+      ]
     }
   ]
 }
