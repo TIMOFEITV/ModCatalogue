@@ -59,12 +59,12 @@
       ]
     },
     {
-      "owner": "xofa18",
-      "repo": "SWYF-ModManager",
-      "displayName": "Mod Manager",
-      "summary": "Adds a MODS button to the main menu with a list of your installed mods. Turn each one on or off (using the launcher's plugins_disabled folder) and edit its settings in game, then restart with one click. F8 opens the same window anywhere.",
+      "owner": "swyf-modding",
+      "repo": "mod-lib",
+      "displayName": "Shared Library",
+      "summary": "The library the mods are built against. Installed on its own it does nothing; it is here so the first mod you install brings it with it.",
       "files": [
-        { "fileName": "SwyfModManager.dll", "folder": "plugins", "expectsPluginAttribute": true }
+        { "fileName": "ScamWYF.Modding.Core.dll", "folder": "core", "expectsPluginAttribute": false }
       ]
     },
     {
@@ -74,6 +74,19 @@
       "summary": "When you fail the quota, you get swatted by police officers, if they catch you, you get reset back to Day 1.",
       "files": [
         { "fileName": "ScamWYF.SwatOnQuotaFail.dll", "folder": "plugins", "expectsPluginAttribute": true }
+      ]
+    },
+    {
+      "owner": "TIMOFEITV",
+      "repo": "ScamWYF-Twitch-Control",
+      "displayName": "SWYF Twitch Control",
+      "summary": "Let Twitch viewers join and control incoming scam calls through chat, with spoken replies, code interaction, and an optional OBS overlay. Also Includes shift-length settings.",
+      "files": [
+        {
+          "fileName": "ScamWYF.TwitchControl.dll",
+          "folder": "plugins",
+          "expectsPluginAttribute": true
+        }
       ]
     }
   ]
