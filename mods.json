@@ -59,15 +59,6 @@
       ]
     },
     {
-      "owner": "swyf-modding",
-      "repo": "mod-lib",
-      "displayName": "Shared Library",
-      "summary": "The library the mods are built against. Installed on its own it does nothing; it is here so the first mod you install brings it with it.",
-      "files": [
-        { "fileName": "ScamWYF.Modding.Core.dll", "folder": "core", "expectsPluginAttribute": false }
-      ]
-    },
-    {
       "owner": "xofa18",
       "repo": "SWYF-ModManager",
       "displayName": "Mod Manager",
